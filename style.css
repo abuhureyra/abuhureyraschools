@@ -561,6 +561,51 @@ body {
 
 
 
+.caption-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.caption-item {
+  width: calc(25% - 20px); /* 4 per row on desktop */
+  text-align: center;
+}
+
+.caption-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caption-item p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+  .caption-item {
+    width: calc(33.33% - 20px); /* 3 per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .caption-item {
+    width: calc(50% - 20px); /* 2 per row on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .caption-item {
+    width: 100%; /* 1 per row on small phones */
+  }
+}
 
 
 
