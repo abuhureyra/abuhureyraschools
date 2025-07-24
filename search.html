@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+
+    /* Sticky Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #170097;
+  padding: 20px 10px;
+  z-index: 9999;
+  transition: padding 0.3s;
+}
+
+#navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #000;
+  color: white;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 580px) {
+  #navbar a, #navbar-right {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Add top margin to content so it's not hidden by navbar */
+body, .hero, main {
+  margin-top: 80px; /* adjust based on your navbar height */
+}
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu Hureyra School</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <!-- Optional: Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+<div id="navbar">
+  <a href="index.html" id="logo">MySchool</a>
+  <div id="navbar-right">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+  <!-- Header / Navbar -->
+  <header id="navbar">
+    <!-- Add your navbar content here -->
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Add your welcome banner or image here -->
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Add cards, gallery, about info, etc. here -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Add contact info, links, and social icons here -->
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Always start page at the top on refresh
+    window.onbeforeunload = () => window.scrollTo(0, 0);
+  </script>
+</body>
+</html>
