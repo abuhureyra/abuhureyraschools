@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="UTF-8">
+  <title>About - Our Team</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .about-team {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    .about-team h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+   .member {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 250px;
+}
+
+.member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      font-size: 18px;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    .member:hover .overlay {
+      opacity: 1;
+    }
+
+
+
+
+
+
+.mission-vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+}
+
+.mission-vision h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #005c97;
+}
+
+.mission-vision p {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+.top-nav {
+  background-color: #005c97;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 20px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.top-nav a:hover {
+  background-color: #003d66;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .top-nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  background-color: #007bff; /* or any attractive color */
+  padding: 12px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.top-nav a:hover {
+  color: #ffd700;
+}
+
+
+
+
+
+
+.gallery-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* Remove animation here */
+  width: 100%; /* Let JS handle sliding */
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slides img {
+    height: 250px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flashback-memory {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.flashback-memory h2 {
+  font-size: 28px;
+  color: #005c97;
+  margin-bottom: 30px;
+}
+
+.flashback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flashback-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.flashback-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background-color: #005c97;
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 30px;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-left: 15px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.back-to-top:hover {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slides img {
+    height: 250px;
+  }
+}
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+
+
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+
+
+
+
+
+
+  <section class="about-team">
+    <h2>Macalimiinta Iskuulka Abuu Hureya</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="ust xasan.jpeg" alt="Principal Ayaan">
+        <div class="overlay">CEO: xasan m'ed gure</div>
+      </div>
+      <div class="member">
+        <img src="ust mcm1.jpeg" alt="Vice Principal Sara">
+        <div class="overlay">ust moh'ed abdirahman</div>
+      </div>
+      <div class="member">
+        <img src="ust hadaafow.jpeg" alt="Teacher Ahmed">
+        <div class="overlay">ust Hadaafow</div>
+      </div>
+      <div class="member">
+        <img src="ust mahdi.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Mahdi</div>
+      </div>
+      <div class="member">
+        <img src="gallery19.jpg" alt="Admin Layla">
+        <div class="overlay">Ust Mohamed</div>
+      </div>
+      <div class="member">
+        <img src="gallery36.jpg" alt="Admin Layla">
+        <div class="overlay">Ust Sadik</div>
+      </div>
+      <div class="member">
+        <img src="ust harun.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Haruun</div>
+      </div>
+      <div class="member">
+        <img src="gallery11.jpg" alt="Admin Layla">
+        <div class="overlay">Ust Mohamed </div>
+      </div>
+      <div class="member">
+        <img src="ust musa.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Abdulahi Musse</div>
+      </div>
+      <div class="member">
+        <img src="ust ibra.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Ibraahim</div>
+      </div>
+      <div class="member">
+        <img src="ust ali.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Ali Mohamoud</div>
+      </div>
+      <div class="member">
+        <img src="ust nasir.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Abdinasir </div>
+      </div>
+      <div class="member">
+        <img src="ust abdirisaq.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust abdirisaq</div>
+      </div>
+      <div class="member">
+        <img src="ust sanka.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Mohamed Abdi</div>
+      </div>
+      <div class="member">
+        <img src="ust abdi malik.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Abdimalik</div>
+      </div>
+      <div class="member">
+        <img src="ust bashhir.jpeg" alt="Admin Layla">
+        <div class="overlay">Ust Bashiir </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="mission-vision">
+  <div class="mission">
+    <h2>Our Mission</h2>
+    <p>
+      Si loo bixiyo waxbarasho tayo leh oo kobcisa hal-abuurka, fikirka
+       muhiimka ah, iyo waxbarashada nolosha oo 
+      dhan si badbaado leh, loo wada dhan yahay, oo ku haboon loo diyaariyay.
+    </p>
+  </div>
+  <div class="vision">
+    <h2>Our Vision</h2>
+    <p>
+      Si aan u noqono machad waxbarasho oo hormuud ah oo awood u siinaya ardayda 
+      si ay u gaadhaan awoodooda buuxda,  bulshadana si togan wax ugu biiriyaan.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="gallery-section">
+  <h2 class="gallery-title">School Moments Gallery</h2>
+  <div class="slider">
+    <div class="slides">
+      <img src="48.jpeg" alt="Gallery Image 1">
+      <img src="2.jpeg" alt="Gallery Image 2">
+      <img src="3.jpeg" alt="Gallery Image 3">
+      <img src="6.jpeg" alt="Gallery Image 2">
+      <img src="7.jpeg" alt="Gallery Image 3">
+      <img src="10.jpeg" alt="Gallery Image 2">
+      <img src="11.jpeg" alt="Gallery Image 3">
+      <img src="13.jpeg" alt="Gallery Image 1">
+      <img src="14.jpeg" alt="Gallery Image 2">
+      <img src="15.jpeg" alt="Gallery Image 3">
+      <img src="17.jpeg" alt="Gallery Image 1">
+      <img src="18.jpeg" alt="Gallery Image 2">
+      <img src="19.jpeg" alt="Gallery Image 3">
+      <img src="21.jpeg" alt="Gallery Image 1">
+      <img src="22.jpeg" alt="Gallery Image 2">
+      <img src="23.jpeg" alt="Gallery Image 3">
+      <img src="25.jpeg" alt="Gallery Image 1">
+      <img src="26.jpeg" alt="Gallery Image 2">
+      <img src="27.jpeg" alt="Gallery Image 3">
+      <img src="29.jpeg" alt="Gallery Image 1">
+      <img src="30.jpeg" alt="Gallery Image 2">
+      <img src="31.jpeg" alt="Gallery Image 3">
+      <img src="33.jpeg" alt="Gallery Image 1">
+      <img src="34.jpeg" alt="Gallery Image 2">
+      <img src="35.jpeg" alt="Gallery Image 3">
+       <img src="37.jpeg" alt="Gallery Image 1">
+      <img src="38.jpeg" alt="Gallery Image 2">
+      <img src="39.jpeg" alt="Gallery Image 3">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="mission-vision">
+  <div class="mission">
+    <h2>XILKEENA MA AHAN OO KALIYA INAAN CASHAR SIINO ARDAYDA </h2>
+    <p>
+      waa kulamo wacyi galin ah oo aan u sameyno ardaydeena qiimaha badan 
+      si aan u tusaaleyno wanaaga iyo siday mustaqbalka wax u qabsan lahaayeen 
+      sawiradaan waxey iskugu jiran dhiira galin baraarujin iyo abaal marino 
+      aan si joogto ah u siino ardayda kaalmaha kala sanad walba 2 jeer taas 
+      oo aan uga gol leenahay inay arday dadaalka sii laba laabaan.
+    </p>
+  </div>
+  <div class="vision">
+    <h2>HOWL JIREEDYADA AAN U SAMEYNO ARDAYDA</h2>
+    <p>
+     labo sano oo lasoo dhaafay waxaan ardaydeena u qanamau tartan kubada cagta ah heerar kale duwan sida ciyaaro iskuulada degmada ku yaala
+     ilaa heer iskuulada gobolka banaadir waxaana rajeyneynaa inaan sii wadno jaanisyo kalena aan ku soo darno.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="flashback-memory">
+  <h2>Flashback Memory</h2>
+  <div class="flashback-grid">
+    <img src="x1.jpeg" alt="Flashback 1">
+    <img src="x2.jpeg" alt="Flashback 2">
+    <img src="x3.jpeg" alt="Flashback 3">
+    <img src="x4.jpeg" alt="Flashback 4">
+    <img src="x5.jpeg" alt="Flashback 5">
+    <img src="x6.jpeg" alt="Flashback 6">
+    <img src="x7.jpeg" alt="Flashback 7">
+    <img src="x8.jpeg" alt="Flashback 8">
+    <img src="x9.jpeg" alt="Flashback 9">
+    <img src="x10.jpeg" alt="Flashback 10">
+    <img src="x11.jpeg" alt="Flashback 11">
+    <img src="x12.jpeg" alt="Flashback 12">
+    <img src="x13.jpeg" alt="Flashback 13">
+    <img src="x14.jpeg" alt="Flashback 14">
+    <img src="x15.jpeg" alt="Flashback 15">
+    <img src="x16.jpeg" alt="Flashback 16">
+    <img src="x17.jpeg" alt="Flashback 17">
+    <img src="x18.jpeg" alt="Flashback 18">
+    <img src="x19.jpeg" alt="Flashback 19">
+    <img src="x20.jpeg" alt="Flashback 20">
+    <img src="x21.jpeg" alt="Flashback 21">
+    <img src="x22.jpeg" alt="Flashback 22">
+    <img src="x23.jpeg" alt="Flashback 23">
+    <img src="x24.jpeg" alt="Flashback 24">
+    <img src="x25.jpeg" alt="Flashback 25">
+    <img src="x26.jpeg" alt="Flashback 26">
+    <img src="x27.jpeg" alt="Flashback 27">
+    <img src="x28.jpeg" alt="Flashback 28">
+    <img src="x29.jpeg" alt="Flashback 29">
+    <img src="x30.jpeg" alt="Flashback 30">
+    <img src="x31.jpeg" alt="Flashback 31">
+    <img src="x32.jpeg" alt="Flashback 32">
+    <img src="x33.jpeg" alt="Flashback 33">
+    <img src="x34.jpeg" alt="Flashback 34">
+    <img src="x35.jpeg" alt="Flashback 35">
+    <img src="x36.jpeg" alt="Flashback 36">
+    <img src="x37.jpeg" alt="Flashback 37">
+    <img src="x38.jpeg" alt="Flashback 38">
+    <img src="x39.jpeg" alt="Flashback 39">
+    <img src="x40.jpeg" alt="Flashback 40">
+    <img src="x41.jpeg" alt="Flashback 41">
+    <img src="x42.jpeg" alt="Flashback 42">
+    <img src="x43.jpeg" alt="Flashback 43">
+    <img src="x44.jpeg" alt="Flashback 44">
+    <img src="x45.jpeg" alt="Flashback 45">
+    <img src="x46.jpeg" alt="Flashback 46">
+    <img src="x47.jpeg" alt="Flashback 47">
+    <img src="x48.jpeg" alt="Flashback 48">
+    <img src="x49.jpeg" alt="Flashback 49">
+    <img src="x50.jpeg" alt="Flashback 50">
+    <img src="x51.jpeg" alt="Flashback 51">
+    <img src="x52.jpeg" alt="Flashback 52">
+    <img src="x53.jpeg" alt="Flashback 53">
+    <img src="x54.jpeg" alt="Flashback 54">
+    <img src="x55.jpeg" alt="Flashback 55">
+    <img src="x56.jpeg" alt="Flashback 56">
+    <img src="x57.jpeg" alt="Flashback 57">
+    <img src="x58.jpeg" alt="Flashback 58">
+    <img src="x59.jpeg" alt="Flashback 59">
+    <img src="x60.jpeg" alt="Flashback 60">
+    <img src="x61.jpeg" alt="Flashback 61">
+    <img src="x62.jpeg" alt="Flashback 62">
+    <img src="x63.jpeg" alt="Flashback 63">
+    <img src="x64.jpeg" alt="Flashback 64">
+    <img src="x65.jpeg" alt="Flashback 65">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  let index = 0;
+
+  function showNextSlide() {
+    index++;
+    if (index >= images.length) {
+      index = 0;
+    }
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  // Change slide every 3 seconds
+  setInterval(showNextSlide, 3000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>My School</h3>
+      <p>Empowering students with knowledge and skills for the future.</p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p>Email: Abuhureyra2020@gmail.com</p>
+      <p>Phone: +252-615905762</p>
+      <p>Address: Yaqshid, CAli turcaaye</p>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <a href="https://www.facebook.com/abuhureyraschools" target="_blank">Facebook</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 ABU HUREYRA SCHOOL. All rights reserved.
+    <a href="#" class="back-to-top">↑ Back to Top</a>
+  </div>
+</footer>
+
+
+
+
+
+<!-- Back to Top Smooth Scroll -->
+<script>
+  document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<!-- Force scroll to top on refresh -->
+<script>
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
+</body>
+
+
+
+
+
+
+<script>
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
+
+
+
+</body>
+</html>
