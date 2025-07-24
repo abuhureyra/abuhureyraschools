@@ -546,6 +546,21 @@ body {
 
 
 
+/* Bad: fixed width */
+.container {
+  width: 1000px;
+}
+
+/* Good: responsive */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+
+
+
 
 
 
